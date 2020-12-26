@@ -12,8 +12,10 @@ class Listcountrys extends StatefulWidget {
 }
 
 class _ListcountrysState extends State<Listcountrys> {
+
   String url = "https://restcountries.eu/rest/v2";
   Future<List<Country>> listar_paises() async {
+    print('aaaa');
     Response response = await get(url);
 
     var jsondata = json.decode(response.body);
